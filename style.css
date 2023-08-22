@@ -7,30 +7,30 @@ body{
 .nav-container{
     position: fixed;
     z-index: 1;
-    max-width: 100vw;
+    max-width: 100%;
     /* height: 80px; */
+    justify-content: space-between;
     padding: 10px;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: #06172f;
     color: white;
     font-size: medium;
-    gap: 590px;
-    font-family: Inter,sans-serif;
-    
+    font-family: Inter,sans-serif; 
+}
+.toggle{
+  displa
 }
 .logo img{
-    filter: hue-rotate(white);
     width: 160px;
-    margin-left: 60px;
 }
 
   .navs{
     display: flex;
     height: fit-content;
     gap: 25px;
+    float
   }
   .nav{
     position: relative;
@@ -41,14 +41,16 @@ body{
   .snav {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 60px;
     background-color: #06172f;
     min-width: 160px;
     padding: 10px 16px;
     z-index: 1;
+    border-top: 1px solid  #2cc2a2;
   }
   .snav hr{
-    border: 1px solid #2cc2a2;
+    
+    display: none;
     
   }
   .nav:hover .snav {
@@ -85,7 +87,7 @@ body{
     max-width: 100vw;
     width: 100%;
     height: 571px;
-    /* margin-top: -16px; */
+  /* margin-top: -16px; */
     background-image: url(/assts/34a63ded-2c58-4968-9523-0347b35661fd.jpg);
     background-size: cover;
     color: white;
@@ -93,11 +95,13 @@ body{
     top: 63px;
     font-size: 15px;
 }
+
 .home-info h1{
   font-family: Literata,serif;
+  margin: 0px;
 }
 .home-info{
-  width: 432px;
+  width: 40%;
   height: 510px;
   position: absolute;
   top: 100px;
@@ -114,7 +118,11 @@ body{
 .home-info button i{
   margin-left: 20px;
 }
+.home-info button:hover{
+  background-color: white;
+  color: black;
 
+}
 /* comers solution */
 .commers-solution{
   margin-top: 10%;
@@ -175,6 +183,7 @@ body{
   background-color: white;
   color: black;
   cursor: pointer;
+  border: 1px solid black;
 
 }
 
@@ -237,6 +246,7 @@ body{
 
 /* about */
 .about-container{
+
   display: flex;
   gap: 20px;
   width: 100%;
@@ -247,10 +257,13 @@ body{
   margin-bottom: 50px;
 }
 .about-content{
-  width: 49%;
+  width: 500px;
 }
 .about-imgs{
-  width: 49%;
+width: 50%;
+}
+.about-imgs img{
+  width: 100%;
 }
 .about-container .about-content p{
   font-family: Inter,sans-serif;
@@ -309,18 +322,22 @@ body{
   background-image: url(/assts/Screenshot_from_2023-08-21_11-20-03.jpg);
   color: white;
   font-family: Inter,sans-serif;
-  gap: 50px;
+  gap: 20px;
   padding: 40px;
   color: rgb(255, 255, 255);
   flex-wrap: wrap;
 }
 .contact-form{
+  min-width: 410px;
   width: 40%;
   background-color: white;
-  padding: 10px;
+  padding: 30px;
   color: black;
   position: relative;
   border-radius: 3px;
+}
+.contact-info{
+  width: 50%;
 }
 .contact-form label{
   position: relative;
@@ -330,18 +347,20 @@ body{
   color: rgba(0, 0, 0, 0.459);
 
 }
-
+.form-item{
+  display: inline;
+}
 .contact-form input{
   width: 95%;
   height: 50px;
-  margin-top:   30px;
+  margin-top:   20px;
   background-color: rgba(128, 128, 128, 0.096);
   border: 1px solid rgba(0, 0, 0, 0.233);
 
 }
 .contact-form textarea{
   width: 95%;
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: rgba(128, 128, 128, 0.096);
   border: 1px solid rgba(0, 0, 0, 0.233);
 }
@@ -408,5 +427,22 @@ body{
     color: #4288bb;
   }
   
+  /* media */
+  @media screen and (max-width:760px){
+    .navs{
+      display: none;
+      background-size: cover;
+    }
+    .home-container{
+      background-image: none;
+      background-color: #06172f ;
+    }
+    .toggle{
+      display: block;
+    }
+    .about-imgs{
+     
+    }
+  }
   
   
