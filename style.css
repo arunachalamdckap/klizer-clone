@@ -2,13 +2,49 @@
 body{
   font-family: Inter,sans-serif;
 }
+
 /* nav */
+.toggle{
+  display: none;
+}
+.toggle-pop{
+  position: absolute;
+  background-color: #06172f;
+  color: #334155;
+  z-index: 1;
+  top: 10px;
+  right: 0px;
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  display: none;
+}
+.toggle:hover.toggle-pop{
+  display: block;
+}
+.toggle-pop .nav p{
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+.toggle-pop .nav{
+  margin-left: 4%;
+  margin-top: 1%;
+  display: flex;
+}
+#togglenavma{
+  margin-top: 10px;
+}
+.toggle-pop .nav:hover .snav{
+  display: block;
+}
 
 .nav-container{
     position: fixed;
     z-index: 1;
     max-width: 100%;
-    /* height: 80px; */
     justify-content: space-between;
     padding: 10px;
     width: 100%;
@@ -25,7 +61,7 @@ body{
 
   .navs{
     display: flex;
-    height: fit-content;
+    /* height: fit-content; */
     gap: 25px;
   }
   .nav{
@@ -70,7 +106,7 @@ body{
   cursor: pointer;
   color:rgba(34, 108, 138, 0.829);
 }
-.navs .nav button:hover{
+.nav .nav button:hover{
   background-color: white;
   color: black;
   cursor: pointer;
@@ -96,6 +132,7 @@ body{
 .home-info h1{
   font-family: Literata,serif;
   margin: 0px;
+  
 }
 .home-info{
   width: 40%;
@@ -103,6 +140,7 @@ body{
   position: absolute;
   top: 100px;
   left: 100px;
+  min-width: 310px;
 }
 .home-info button{
   background-color: #2cc2a2;
@@ -125,8 +163,6 @@ body{
   margin-top: 10%;
  width: 100%;
  font-family: Literata,serif;
-
-
 }
 
 .commers-solution .commer{
@@ -142,18 +178,22 @@ body{
 .commer1{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
-  padding: 10% 4%;
   margin: 0px;
 }
 .commers-solution .commer1{
   background-color: rgba(238, 238, 238, 0.774);
   margin-top: 10%;
   display: flex;
+  gap: 25px;
   max-width: 100%;
   width: 100%;
+  padding: 50px 0px;
 }
 .commer1-contat{
+  width: 50%;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,9 +202,6 @@ body{
   margin-top: 30px;
   margin-bottom: 40px;
   font-family: Inter,sans-serif;
-}
-.commers-solution .commer1 .commer1-contat{
-  width: 50%;
 }
 .commers-solution .commer1 .commer1-contat button{
   background-color: #2cc2a2;
@@ -186,11 +223,12 @@ body{
 
 .commer1-log{
   font-family: Inter,sans-serif;
-  width: 50%;
+  width: 45%;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  
   gap: 15px;
 }
 .commer1-log .clogo{
@@ -243,7 +281,6 @@ body{
 
 /* about */
 .about-container{
-
   display: flex;
   gap: 20px;
   width: 100%;
@@ -290,7 +327,7 @@ width: 50%;
 }
 .logo-row{
   margin-top: 0%;
-  width: 85%;
+  width: 86%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,6 +345,9 @@ width: 50%;
 #last-logo{
   border: none;
 }
+#last-row{
+  border: none;
+}
 
 
 /* contect */
@@ -318,6 +358,8 @@ width: 50%;
   justify-content: center;
   align-items: center;
   background-image: url(/assts/Screenshot_from_2023-08-21_11-20-03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   font-family: Inter,sans-serif;
   gap: 20px;
@@ -326,8 +368,8 @@ width: 50%;
   flex-wrap: wrap;
 }
 .contact-form{
-  min-width: 410px;
-  width: 40%;
+  min-width: 309px;
+  width: 46%;
   background-color: white;
   padding: 30px;
   color: black;
@@ -390,14 +432,13 @@ width: 50%;
   display: flex;
   color: #6997b7;
   flex-wrap: wrap;
-  gap: 90px;
+  gap: 40px;
   padding: 70px;
   align-items: center;
-  height: 450px;
   }
   
   #ft-logo{
-    width: 220px;
+    width: 55%;
   }
   #ft-logo2{
     width: 28px;
@@ -405,16 +446,17 @@ width: 50%;
   .footer2{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
   }
   .footer1 div{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px;
   }
   .footer-box b{
     color: #4288bb;
     text-align: center;
+    
   }
   .copy{
     display: flex;
@@ -426,19 +468,49 @@ width: 50%;
   
   /* media */
   @media screen and (max-width:760px){
+    /* nav */
     .navs{
       display: none;
       background-size: cover;
     }
-    .home-container{
-      background-image: none;
-      background-color: #06172f ;
-    }
     .toggle{
       display: block;
+      margin: 10px;
+      font-size: x-large;
+    }
+    /* home */
+    .home-info{
+      left: 15px;
+      top: 85px;
+    }
+    .home-container{
+      background-image: url(assts/home.bg2.jpg);
+    }
+    /* comers solution */
+    /* .commer1-log {
+      width: 100%;
+    } */
+   
+    /* progress */
+    .pro-container{
+      padding: 80px 0px;
+    }
+    /* partner */
+    .logo-row{
+      width: 100%;
+    }
+    .logo-row img{
+      width: 67px;
     }
     .about-imgs{
-     
+      width: 80%;
+    }
+    /* contact */
+    .contact-form input{
+      margin-top: 0px;
+    }
+    .contact-form textarea{
+      margin-top: 0px;
     }
   }
   
