@@ -60,28 +60,28 @@
                 <p id="a33">Blog</p>
             </div>
             <div class="nav">
-                <button>contact</button>
+                <button onclick="document.getElementById('pop-cont1').style.display='flex'">contact</button>
             </div>
         </div>
 
         <!-- toggle -->
         <div class="toggle">
-            <a href="">
+            <button type="button" onclick="document.getElementById('demo').style.display='flex'">
                 <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-            </a>
+            </button>
         </div>
     </div>
-   
+
 
     <!-- home -->
     <div class="home-container">
-        <div class="home-info">
+        <div class="home-info" id="home1">
             <h1>Driving Distributor Growth Through Ecommerce</h1>
             <p>With 15+ years of extensive experience in eCommerce website development and design, Klizer, has a track
                 record of delivering profitable and effective online store solutions.</p>
             <p>Our expertise spans the entire spectrum of eCommerce websites, including development, design, and digital
                 growth.</p>
-            <button>Get An Expert Consultation <i class="fa-solid fa-angle-down fa-rotate-270"></i></button>
+            <button onclick="document.getElementById('pop-cont1').style.display='flex'">Get An Expert Consultation <i class="fa-solid fa-angle-down fa-rotate-270"></i></button>
         </div>
     </div>
 
@@ -95,8 +95,8 @@
                 <h2>Customized Commerce <br>Solutions For Distributors</h2>
                 <p>At Klizer, we are dedicated to providing our clients with exceptional eCommerce solutions to drive
                     their businesses forward. With years of experience and a highly skilled team, we are experts in
-                    delivering cutting-edge services across the <br> following areas.</p>
-                <button>Start Your Project <i class="fa-solid fa-angle-down fa-rotate-270"></i></button>
+                    delivering cutting-edge services across the following areas.</p>
+             <button href="#home1" onclick="document.getElementById('pop-cont1').style.display='flex'">Start Your Project <i class="fa-solid fa-angle-down fa-rotate-270"></i></button>
             </div>
             <div class="commer1-log">
                 <div class="cclum cclum-1">
@@ -441,22 +441,22 @@
     </div>
 
     <!-- toggle -->
-    <div class="toggle-pop">
+    <div class="toggle-pop" id="demo">
+        <button id="close-button" type="button" onclick="document.getElementById('demo').style.display='none'">
+            <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+        </button>
         <div class="nav" id="togglenavma">
-            <p id="a33">Technology <i class="fa-solid fa-angle-down"></i></p>
+            <p>Technology</p>
         </div>
-        <div class="snav">
-            <hr>
+        <div class="s-nav">
             <p>Adobe Commerce</p>
             <p>BigCommerce</p>
             <p>Shopify</p>
         </div>
-        <div class="nav" >
-            <p id="a33">Solution <i class="fa-solid fa-angle-down"></i></p>
-           
+        <div class="nav">
+            <p >Solution</p>
         </div>
-        <div class="snav">
-            <hr>
+        <div class="s-nav">
             <p>Headless Commerce</p>
             <p>Ecommerce QA</p>
             <p>ADA Compliance</p>
@@ -464,21 +464,53 @@
             <p>CBD</p>
         </div>
         <div class="nav">
-            <p id="a33">Customer <i class="fa-solid fa-angle-down"></i></p>
-            
+            <p >Customer </p>
         </div>
-        <div class="snav">
-            <hr>
+        <div class="s-nav">
             <p>Case Studies</p>
             <p>Testmonials</p>
         </div>
         <div class="nav">
-            <p id="a33">Blog</p>
+            <p >Blog</p>
         </div>
         <div class="nav">
-            <button>get in touch</button>
+            <button onclick="document.getElementById('pop-cont1').style.display='flex'">get in touch</button>
         </div>
     </div>
+
+    <!-- pop-contact -->
+
+    <div class="pop-cont" id="pop-cont1">
+        <div class="contact-form">
+            <button id="close-button" type="button" onclick="document.getElementById('pop-cont1').style.display='none'">
+                <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+            </button>
+           <div class="cont-head">
+            <h3>Grow Your Online Presence</h3>
+            <p>Reach out to our team for an expert consultation</p>
+           </div>
+            <form action="">
+                <div class="form-item">
+                    <input type="text" name="name" required>
+                    <label>Full Name*</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="email" required>
+                    <label>Work Email*</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="about" required>
+                    <label>How did you hear about us*</label>
+                </div>
+                <div class="form-item">
+                    <textarea class="" name="message" required rows="4"></textarea>
+                    <label id="textfrom">Tell us about your commerce project*</label>
+                </div>
+                <button id="pop-submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>
