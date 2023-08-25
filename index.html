@@ -60,16 +60,19 @@
                 <p id="a33">Blog</p>
             </div>
             <div class="nav">
-                <button onclick="document.getElementById('pop-cont1').style.display='flex'">contact</button>
+                <a href="#top">
+                    <button onclick="document.getElementById('pop-cont1').style.display='flex'">contact</button>
+                </a>
             </div>
         </div>
-
         <!-- toggle -->
         <div class="toggle">
             <button type="button" onclick="document.getElementById('demo').style.display='flex'">
                 <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
             </button>
-            <a href="home-container"></a>
+            <a href="home-container">
+                
+            </a>
         </div>
     </div>
 
@@ -482,8 +485,11 @@
         <div class="nav">
             <p >Blog</p>
         </div>
+        
         <div class="nav">
-            <button onclick="document.getElementById('pop-cont1').style.display='flex'">get in touch</button>
+            <a href="#pop-cont1">
+                <button onclick="document.getElementById('pop-cont1').style.display='flex'">get in touch</button>
+            </a>
         </div>
     </div>
 
@@ -514,7 +520,7 @@
                 <div class="form-item">
                     <textarea class="" name="message" required rows="4"></textarea>
                     <label id="textfrom">Tell us about your commerce project*</label>
-                </div>
+                </div
                 <button id="pop-submit" class="submit-btn">Submit</button>
             </form>
         </div>

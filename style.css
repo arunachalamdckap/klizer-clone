@@ -517,7 +517,7 @@ width: 50%;
   .pop-cont{
     position: absolute;
     top: 104px;
-    display: flex;
+    display: none;
     justify-content: center;
     z-index: 1;
   }
