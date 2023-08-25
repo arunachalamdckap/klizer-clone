@@ -215,6 +215,7 @@ body{
 .commers-solution .commer h1{
   font-size: xx-large;
   height: 8%;
+  margin-top: 120px;
 }
 .commer1{
   display: flex;
@@ -307,7 +308,7 @@ body{
   padding: 165px 0px;
   color: white;
   flex-wrap: wrap;
-  
+ 
 }
 .pro-1{
   display: flex;
@@ -518,6 +519,7 @@ width: 50%;
     top: 104px;
     display: flex;
     justify-content: center;
+    z-index: 1;
   }
   #pop-submit{
     width: 95%;
@@ -538,6 +540,17 @@ width: 50%;
     top: 0px;
   }
   /* media */
+
+  @media screen and (max-width:1330px){
+    .commer1-log{
+      width: 80%;
+    }
+  }
+
+
+/* ------------------------------------------------------------------------- */
+
+
   @media screen and (max-width:760px){
     /* nav */
     .navs{
@@ -561,7 +574,6 @@ width: 50%;
     .commer1-log {
       width: 100%;
     }
-    
    
     /* progress */
     .pro-container{
@@ -586,64 +598,73 @@ width: 50%;
     }
   }
 
-  @media screen and (max-width:420px){
-    /* home */
-
-    .home-container{
-      background-image: url(assts/home.bg3.jpg);
+  @media screen and (max-width:601px){
+    .commer1-log{
+      width: 80%;
     }
-    .home-info{
-      left: 0%;
-      top: 3%;
+    .cclum{
+      width: 80%;
+      justify-content: center;
+    }
+   #g .clogo{
       width: 100%;
-      height: 97%;
-      background-color: rgba(0, 0, 0, 0.534);
-      padding: 19% 0% 0% 5%;
-
+      justify-content: center;
     }
-
-
-    
-
-
-    /* commer */
-    .commers-solution{
-      margin-top: 25%;
-    }
-    .commer1-contat{
-      min-width: 68%;
-    }
-
-    /* comers solution  */
-
-    .commer1-log .clogo{
-      width: 228px;
-    }
-    #g .clogo {
-      width: 228px;
-  }
-  
-  
-
-
-  }
-  
-
-
-
-  @media screen and (max-width:320){
-    .home-info{
-      left: 8px;
-    }
+   
   }
 
+
+/* ----------------------------------------------------- */
+  
 @media screen and (max-width:514){
   .commer1-contat{
     min-width: 407px;
   }
+  /* .commers-solution .commer h1{
+    margin-top: 110px;
+  } */
 }
-@media screen and (max-width:514){
+
+/* ---------------------------------------------- */
+@media screen and (max-width:420px){
+  /* home */
+
+  .home-container{
+    background-image: url(assts/home.bg3.jpg);
+  }
+  .home-info{
+    left: 0%;
+    top: 3%;
+    width: 100%;
+    height: 97%;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 19% 0% 0% 5%;
+
+  }
+  /* commer */
+  .commers-solution{
+    margin-top: 25%;
+  }
   .commer1-contat{
-    min-width: 407px;
+    min-width: 68%;
+  }
+
+  /* comers solution  */
+
+  .commer1-log .clogo{
+    width: 228px;
+  }
+  #g .clogo {
+    width: 228px;
+}
+
+}
+
+
+/* ------------------------------------------------ */
+
+@media screen and (max-width:320){
+  .home-info{
+    left: 8px;
   }
 }
