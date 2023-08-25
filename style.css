@@ -525,8 +525,9 @@ width: 50%;
     width: 95%;
     border: none;
     background-color: #2cc2a2;
-    height: 8%;
     color: white;
+    padding: 4% 0%;
+    border-radius: 8px;
   }
   .cont-head{
     font-family: Literata,serif;
@@ -664,6 +665,7 @@ width: 50%;
 /* ------------------------------------------------ */
 
 @media screen and (max-width:320){
+
   .home-info{
     left: 8px;
   }
